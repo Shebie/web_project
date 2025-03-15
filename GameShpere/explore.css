@@ -1,0 +1,166 @@
+
+.navbar {
+    background-color: #F5F5F5 !important; /* Equivalent to Bootstrap's $gray-500 */
+    background: white; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000 !important; /* Black text */
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    opacity: 0.8; /* Subtle hover effect */
+  }
+  
+  .brand-text {
+    margin-left: 10px;
+  }
+  
+  .nav-link {
+    color: #000000 !important; /* Black text */
+    font-weight: 500;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #000000; /* Black underline */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%; /* Underline animation on hover */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* Bold text for active link */
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-toggle::after {
+    content: none; /* Remove Bootstrap's default arrow */
+  }
+  
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+  }
+  
+  .dropdown-toggle::before {
+    content: '▼'; /* Custom dropdown arrow */
+    font-size: 12px;
+    color: #000000;
+  }
+    
+  .dropdown-menu {
+    background: #ffffff; /* White dropdown background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: #000000 !important; /* Black text */
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background: #f0f0f0; /* Light gray hover */
+  }
+  
+  .dropdown-divider {
+    border-color: #e0e0e0; /* Subtle divider */
+  }
+
+
+  * Form Control */
+.form-control {
+  background: #f8f9fa; /* Light gray input background */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  color: #000000; /* Black text */
+}
+
+.form-control:focus {
+  background: #ffffff; /* White background on focus */
+  color: #000000;
+  box-shadow: none;
+}
+
+/* Search Button */
+.btn-outline-dark {
+  border-color: #000000; /* Black border */
+  color: #000000; /* Black text */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background: #000000 !important; /* Black background on hover */
+  color: #ffffff !important; /* White text on hover */
+}
+
+/* Featured Games Title */
+/* Featured Games Title */
+.featured-title {
+  background: black;
+  color: white; /* Changed color to white */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 38px; /* Increased font size */
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif; /* Futuristic and gaming-style font */
+  text-transform: uppercase; /* Makes it stand out */
+  letter-spacing: 4px; /* Adds extra spacing */
+  text-shadow: 3px 3px 12px rgba(255, 255, 255, 0.8); /* White glow effect */
+}
+
+
+/* Game Grid Layout */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 10px; /* Reduced gap for better spacing */
+  padding: 20px;
+  background-color: #000000;
+}
+
+/* Game Card Styling */
+.game-card {
+  width: 100%;
+  height: 300px; /* Set a fixed height */
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px 10px;
+}
+
+/* Game Image Styling */
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage */
+  border-radius: 10px;
+}
+
+/* Hover Effect */
+.game-card:hover {
+  transform: scale(1.05); /* Slight pop-up effect */
+}
+
+

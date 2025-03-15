@@ -1,0 +1,209 @@
+
+.navbar {
+    background-color: #F5F5F5 !important; /* Equivalent to Bootstrap's $gray-500 */
+    background: white; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000 !important; /* Black text */
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    opacity: 0.8; /* Subtle hover effect */
+  }
+  
+  .brand-text {
+    margin-left: 10px;
+  }
+  
+  .nav-link {
+    color: #000000 !important; /* Black text */
+    font-weight: 500;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #000000; /* Black underline */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%; /* Underline animation on hover */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* Bold text for active link */
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-toggle::after {
+    content: none; /* Remove Bootstrap's default arrow */
+  }
+  
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+  }
+  
+  .dropdown-toggle::before {
+    content: '▼'; /* Custom dropdown arrow */
+    font-size: 12px;
+    color: #000000;
+  }
+    
+  .dropdown-menu {
+    background: #ffffff; /* White dropdown background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: #000000 !important; /* Black text */
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background: #f0f0f0; /* Light gray hover */
+  }
+  
+  .dropdown-divider {
+    border-color: #e0e0e0; /* Subtle divider */
+  }
+  
+  /* Form Control */
+  .form-control {
+    background: #f8f9fa; /* Light gray input background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    color: #000000; /* Black text */
+  }
+  
+  .form-control:focus {
+    background: #ffffff; /* White background on focus */
+    color: #000000;
+    box-shadow: none;
+  }
+  
+  /* Search Button */
+  .btn-outline-dark {
+    border-color: #000000; /* Black border */
+    color: #000000; /* Black text */
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-dark:hover {
+    background: #000000 !important; /* Black background on hover */
+    color: #ffffff !important; /* White text on hover */
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 60%;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Custom Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.play-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* Hide play button when video starts */
+.video-wrapper.playing .play-button {
+    display: none;
+}
+
+/* Video Container */
+.video-container {
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* Description Styling */
+.video-description {
+    width: 40%;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.video-description h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.video-description p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column; /* Stack video and text on smaller screens */
+        text-align: center;
+    }
+
+    video {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .video-description {
+        width: 100%;
+    }
+}

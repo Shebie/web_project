@@ -1,0 +1,206 @@
+
+/* Add a background to the body but ensure it doesn't affect the navbar */
+body {
+    background-color: black;
+}
+
+/* Ensure the navbar has a white background */
+.navbar {
+    background-color: #fff !important; /* Force white background */
+}
+.navbar {
+    background-color: #F5F5F5 !important; /* Equivalent to Bootstrap's $gray-500 */
+    background: white; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000 !important; /* Black text */
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    opacity: 0.8; /* Subtle hover effect */
+  }
+  
+  .brand-text {
+    margin-left: 10px;
+  }
+  
+  .nav-link {
+    color: #000000 !important; /* Black text */
+    font-weight: 500;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #000000; /* Black underline */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%; /* Underline animation on hover */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* Bold text for active link */
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-toggle::after {
+    content: none; /* Remove Bootstrap's default arrow */
+  }
+  
+  .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between text and arrow */
+  }
+  
+  .dropdown-toggle::before {
+    content: '▼'; /* Custom dropdown arrow */
+    font-size: 12px;
+    color: #000000;
+  }
+    
+  .dropdown-menu {
+    background: #ffffff; /* White dropdown background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: #000000 !important; /* Black text */
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background: #f0f0f0; /* Light gray hover */
+  }
+  
+  .dropdown-divider {
+    border-color: #e0e0e0; /* Subtle divider */
+  }
+  
+  /* Form Control */
+  .form-control {
+    background: #f8f9fa; /* Light gray input background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    color: #000000; /* Black text */
+  }
+  
+  .form-control:focus {
+    background: #ffffff; /* White background on focus */
+    color: #000000;
+    box-shadow: none;
+  }
+  
+  /* Search Button */
+  .btn-outline-dark {
+    border-color: #000000; /* Black border */
+    color: #000000; /* Black text */
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-dark:hover {
+    background: #000000 !important; /* Black background on hover */
+    color: #ffffff !important; /* White text on hover */
+  }
+
+  
+/* Center the login container */
+/* login.css */
+/* Remove or comment out global styles like this: */
+/*
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+*/
+
+
+/* Add a class-specific scope for the login container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+}
+
+.login-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container .btn:hover {
+    background-color: #0056b3;
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Add these to login.css if needed */
+.signup-container {
+    max-width: 500px; /* Slightly wider for more fields */
+}
+
+.signup-container h2 {
+    color: #333; /* Adjust heading color if needed */
+}

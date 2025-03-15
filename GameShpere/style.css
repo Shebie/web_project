@@ -1,0 +1,329 @@
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* This can help hide horizontal scroll */
+}
+
+img {
+    border-radius: 20px; /* Adjust the value to control the roundness */
+  }
+
+/* Custom Navbar Styles */
+
+
+.navbar {
+  background-color: #F5F5F5 !important; /* Equivalent to Bootstrap's $gray-500 */
+  background: white; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000 !important; /* Black text */
+  transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8; /* Subtle hover effect */
+}
+
+.brand-text {
+  margin-left: 10px;
+}
+
+.nav-link {
+  color: #000000 !important; /* Black text */
+  font-weight: 500;
+  font-weight: bold;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #000000; /* Black underline */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Underline animation on hover */
+}
+
+.nav-link.active {
+  font-weight: bold; /* Bold text for active link */
+}
+
+/* Dropdown Styling */
+.dropdown-toggle::after {
+  content: none; /* Remove Bootstrap's default arrow */
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; /* Space between text and arrow */
+}
+
+.dropdown-toggle::before {
+  content: '▼'; /* Custom dropdown arrow */
+  font-size: 12px;
+  color: #000000;
+}
+  
+.dropdown-menu {
+  background: #ffffff; /* White dropdown background */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: #000000 !important; /* Black text */
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0; /* Light gray hover */
+}
+
+.dropdown-divider {
+  border-color: #e0e0e0; /* Subtle divider */
+}
+
+/* Form Control */
+.form-control {
+  background: #f8f9fa; /* Light gray input background */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  color: #000000; /* Black text */
+}
+
+.form-control:focus {
+  background: #ffffff; /* White background on focus */
+  color: #000000;
+  box-shadow: none;
+}
+
+/* Search Button */
+.btn-outline-dark {
+  border-color: #000000; /* Black border */
+  color: #000000; /* Black text */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background: #000000 !important; /* Black background on hover */
+  color: #ffffff !important; /* White text on hover */
+}
+
+
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+  grid-auto-rows: 120px; /* Reduced row height */
+  gap: 8px; /* Slightly smaller spacing */
+  max-width: 80%; /* Makes the grid smaller */
+  margin: auto; /* Centers the grid */
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Custom spans for a stylish layout */
+.grid-item-1 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.grid-item-2 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.grid-item-3 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.grid-item-4 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.grid-item-5 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.grid-item-6 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+      grid-auto-rows: 100px; /* Even smaller row height */
+      max-width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+
+.card {
+  background-size: cover;       /* Ensures the image fully covers the card */
+  background-position: center;  /* Centers the image properly */
+  background-repeat: no-repeat; /* Prevents repetition */
+}
+
+.card h3 {
+  font-size: 1.2rem; /* Smaller title */
+}
+
+.card small {
+  font-size: 0.8rem; /* Smaller text for details */
+}
+
+.card ul {
+  gap: 5px; /* Reduce spacing between elements */
+}
+
+.featured-games-wrapper {
+  width: 100vw; /* Full viewport width */
+  background-color: #000000; /* Full black background */
+}
+.featured-games {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+
+}
+
+.featured-games h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.featured-games .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px; /* Spacing between cards */
+}
+
+.featured-games .full-span {
+  grid-column: span 4; /* Span all 4 columns */
+  height: 400px; /* Fixed height for full-span card */
+  margin-bottom: 30px; /* Space below the full-span row */
+  padding: 0; /* Remove padding */
+  
+}
+
+.featured-games .card {
+  background-color: black;
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensures the image stays within the card */
+  height: auto; /* Fixed height for regular cards */
+  padding: 0; /* Remove padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+  border: 0;
+
+}
+
+.featured-games .card:hover {
+  transform: scale(1.05); /* Scale up slightly */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+}
+
+
+.featured-games .card img,
+.featured-games .full-span img {
+  width: 100%; /* Stretch to full width of the parent */
+  height: 100%; /* Stretch to full height of the parent */
+  object-fit: cover; /* Ensures the image covers the container */
+  object-position: center; /* Centers the image */
+  display: block; /* Fixes inline spacing issues */
+  min-width: 100%; /* Ensures the image covers the width */
+  min-height: 100%; /* Ensures the image covers the height */
+  border: 0;
+}
+
+.featured-games .card-content {
+  display: none; /* Hide titles and descriptions */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .featured-games .row {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-games .row {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+  }
+}
+
+/* Ensure no white spaces on sides */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.custom-bg {
+  background-color: black;
+  color: white;
+  padding: 0; /* Remove padding */
+}
+
+.custom-bg .card {
+  background-color: #333;
+  color: white;
+  max-width: 90%; /* Reduce the width of the cards */
+  margin-left: auto; /* Center the cards */
+  margin-right: auto; /* Center the cards */
+}
+
+.custom-bg .card-header {
+  background-color: #444;
+  color: white;
+}
+
+.custom-bg .btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.custom-bg .btn-outline-light:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
